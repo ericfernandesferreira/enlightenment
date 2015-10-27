@@ -23,8 +23,7 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my
-personal Enlightenment Project
+# Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Enlightenment Project
 
 PRGNAM=bullet
 VERSION=${VERSION:-2.83.6}
