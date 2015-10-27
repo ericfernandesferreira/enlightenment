@@ -21,11 +21,10 @@
 # with this program (most likely, a file named COPYING).  If not, see
 # <http://www.gnu.org/licenses/>.
 
-# Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my
-personal Enlightenment Project
+# Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Enlightenment Project
 
 PRGNAM=enlightenment
-VERSION=${VERSION:-0.20.0}
+VERSION=${VERSION:-0.19.12}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_esb}
 
@@ -37,7 +36,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c https://download.enlightenment.org/rel/apps/enlightenment/$PRGNAM-$VERSION-beta.tar.xz
+wget http://download.enlightenment.org/rel/apps/enlightenment/$PRGNAM-$VERSION.tar.gz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/esb}
@@ -63,11 +62,11 @@ set -e
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PRGNAM-$VERSION-beta
-tar xvf $CWD/$PRGNAM-$VERSION-beta.tar.xz
-#git clone https://git.enlightenment.org/core/enlightenment.git
-cd $PRGNAM-$VERSION-beta
-#git checkout
+rm -rf $PRGNAM-$VERSION
+tar -xvf $CWD/$PRGNAM-$VERSION.tar.gz
+# git clone https://git.enlightenment.org/core/enlightenment.git
+cd $PRGNAM-$VERSION
+# git checkout
 
 chown -R root:root .
 find -L . \
@@ -76,7 +75,6 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
   -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-LDFLAGS="-L/usr/lib${LIBDIRSUFFIX}" \
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
 ./configure \
@@ -86,8 +84,10 @@ CXXFLAGS="$SLKCFLAGS" \
   --localstatedir=/var \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
+  --enable-mount-udisks \
   --enable-mount-eeze \
   --disable-bluez4 \
+  --enable-device-udev \
   --disable-static \
   --build=$ARCH-slackware-linux
 
