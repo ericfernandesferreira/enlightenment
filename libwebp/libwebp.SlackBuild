@@ -3,8 +3,7 @@
 # Slackware build script for webP
 # written by powtrix (@gmail.com)
 
-# Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my
-personal Enlightenment Project
+# Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Enlightenment Project
 
 PRGNAM=libwebp
 VERSION=${VERSION:-0.4.3}
