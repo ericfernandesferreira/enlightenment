@@ -23,11 +23,10 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my
-personal Enlightenment Project
+# Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Enlightenment Project
 
 PRGNAM=elementary
-VERSION=${VERSION:-1.16.0}
+VERSION=${VERSION:-1.15.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_esb}
 
@@ -38,6 +37,8 @@ if [ -z "$ARCH" ]; then
        *) ARCH=$( uname -m ) ;;
   esac
 fi
+
+wget http://download.enlightenment.org/rel/libs/elementary/$PRGNAM-$VERSION.tar.gz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/esb}
@@ -63,10 +64,11 @@ set -e
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PRGNAM
-git clone https://git.enlightenment.org/core/elementary.git
-cd $PRGNAM
-git checkout
+rm -rf $PRGNAM-$VERSION
+tar xvf $CWD/$PRGNAM-$VERSION.tar.gz
+# git clone https://git.enlightenment.org/core/elementary.git
+cd $PRGNAM-$VERSION
+# git checkout
 
 chown -R root:root .
 find -L . \
@@ -78,7 +80,7 @@ find -L . \
 CFLAGS="$SLKCFLAGS" \
 CPPFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
-./autogen.sh \
+./configure \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
