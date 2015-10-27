@@ -5,8 +5,7 @@
 
 # New Maintainer - Nishant Limbachia <nishant _AT_ mnspace _DOT_ net> - 11/04/2011
 
-# Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my
-personal Enlightenment Project
+# Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Enlightenment Project
 
 PRGNAM=cython
 SRCNAM=Cython
