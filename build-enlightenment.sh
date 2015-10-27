@@ -26,8 +26,7 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my
-personal Enlightenment Project
+# Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Enlightenment Project
 
 # Set to 1 if you'd like to install/upgrade package as they are built.
 # This is recommended.
@@ -46,21 +45,18 @@ for dir in \
   bullet \
   libwebp \
   efl \
+  elementary \
   evas_generic_loaders \
   emotion_generic_players \
-  libeweather \
-  elementary \
-  geneet \
-  efx \
-  cython \
   python-efl \
+  python-elm-extensions \
   ecrire \
+  ePad \
   emprint \
   ephoto \
   equate \
   rage \
   terminology \
-  expedite \
   enlightenment \
   ; do
   # Get the package name
