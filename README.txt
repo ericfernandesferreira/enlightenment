@@ -1,4 +1,4 @@
-Versão do Enlightenment : 0.20 Beta2
+Versão do Enlightenment : 0.19.12
 Source do Enlightenment : github
 
 Essa minha versão do Enlightenment é baseada na versão do GArik
@@ -14,11 +14,12 @@ Requerimentos:
 
 Conteúdo:
 - ecrire
-- efx
 - emprint
+- epad
 - ephoto
 - equate
 - rage
+- terminology
 
 Como instalar:
 - você precisa baixar o .zip ou clonar o git e então executar o script
@@ -26,7 +27,7 @@ sh build-enlightenment.sh
 
 ------------------------------------------------------------------------------
 
-Enlightenment version: 0.20 Beta2
+Enlightenment version: 0.19.12
 Enlightenment source : github
 
 This my version of Enlightenment is based on the version of Garik
@@ -42,11 +43,12 @@ Requirements:
 
 Contents:
 - ecrire
-- efx
 - emprint
+- epad
 - ephoto
 - equate
 - rage
+- terminology
 
 How to install:
 - you need to download the .zip or clone git and then run the script
