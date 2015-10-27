@@ -37,6 +37,8 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
+wget http://download.enlightenment.org/rel/bindings/python/$PRGNAM-$VERSION.tar.gz
+
 CWD=$(pwd)
 TMP=${TMP:-/tmp/esb}
 PKG=$TMP/package-$PRGNAM
@@ -61,10 +63,11 @@ set -e
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PRGNAM
-git clone https://git.enlightenment.org/bindings/python/python-efl.git
-cd $PRGNAM
-git checkout
+rm -rf $PRGNAM-$VERSION
+tar xvf $CWD/$PRGNAM-$VERSION.tar.gz
+# git clone https://git.enlightenment.org/bindings/python/python-efl.git
+cd $PRGNAM-$VERSION
+# git checkout
 
 chown -R root:root .
 find -L . \
@@ -73,14 +76,13 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
   -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-python setup.py build
-python setup.py install --prefix=/usr --root=$PKG
+python setup.py install --root=$PKG
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cp -a AUTHORS CODING COPYING* ChangeLog INSTALL README TODO $PKG/usr/doc/$PRGNAM-$VERSION
+cp -a AUTHORS COPYING* ChangeLog INSTALL README $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 find $PKG/usr/doc/$PRGNAM-$VERSION/ -type f -exec chmod 644 {} \;
 chown -R root:root $PKG/usr/doc/$PRGNAM-$VERSION
