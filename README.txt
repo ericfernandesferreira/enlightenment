@@ -1,9 +1,12 @@
-Versão do Enlightenment : 0.19.12
+Versão do Enlightenment : 0.20 Beta3
 Source do Enlightenment : github
 
 Essa minha versão do Enlightenment é baseada na versão do GArik
 https://github.com/GArik/enlightenment-SlackBuilds
 ***Todos os créditos vão para ele.
+
+Créditos ao Ryan também, obrigado.
+https://github.com/ryanpcmcquen/slackENLIGHTENMENT
 
 Esse source foi construído principalmente para quem quiser usar a última versão
 do Enlightenment junto com o pulseaudio.
@@ -27,12 +30,15 @@ sh build-enlightenment.sh
 
 ------------------------------------------------------------------------------
 
-Enlightenment version: 0.19.12
+Enlightenment version: 0.20 Beta3
 Enlightenment source : github
 
 This my version of Enlightenment is based on the version of Garik
 https://github.com/GArik/enlightenment-SlackBuilds
 *** All credits go to him.
+
+Credits to Ryan too, thanks for sharing
+https://github.com/ryanpcmcquen/slackENLIGHTENMENT
 
 This source was built primarily for those who want to use the latest version
 Enlightenment along with pulseaudio.
