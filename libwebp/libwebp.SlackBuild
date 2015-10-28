@@ -80,6 +80,12 @@ make install-strip DESTDIR=$PKG
   CFLAGS="$SLKCFLAGS -I$PKG/usr/include" \
   LDFLAGS="-L$PKG/usr/lib${LIBDIRSUFFIX} -lwebp" \
   python setup.py install --root=$PKG
+  # Install the python3 module if python3 is installed
+  if $(python3 -c 'import sys' 2>/dev/null); then
+    CFLAGS="$SLKCFLAGS -I$PKG/usr/include" \
+    LDFLAGS="-L$PKG/usr/lib${LIBDIRSUFFIX} -lwebp" \
+    python3 setup.py install --root=$PKG
+  fi
 )
 
 find $PKG/usr/man -type f -exec gzip -9 {} \;
