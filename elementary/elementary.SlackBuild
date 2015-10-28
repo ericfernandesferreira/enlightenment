@@ -26,7 +26,7 @@
 # Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Enlightenment Project
 
 PRGNAM=elementary
-VERSION=${VERSION:-1.15.2}
+VERSION=${VERSION:-1.16.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_esb}
 
@@ -38,7 +38,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget http://download.enlightenment.org/rel/libs/elementary/$PRGNAM-$VERSION.tar.gz
+wget http://download.enlightenment.org/rel/libs/elementary/$PRGNAM-$VERSION-beta3.tar.gz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/esb}
@@ -64,10 +64,10 @@ set -e
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PRGNAM-$VERSION
-tar xvf $CWD/$PRGNAM-$VERSION.tar.gz
+rm -rf $PRGNAM-$VERSION-beta3
+tar xvf $CWD/$PRGNAM-$VERSION-beta3.tar.gz
 # git clone https://git.enlightenment.org/core/elementary.git
-cd $PRGNAM-$VERSION
+cd $PRGNAM-$VERSION-beta3
 # git checkout
 
 chown -R root:root .
