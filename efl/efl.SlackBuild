@@ -89,9 +89,9 @@ LDFLAGS="-L/usr/lib${LIBDIRSUFFIX}" \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --enable-fb \
   --with-profile=release \
-  --enable-lua-old \
   --enable-xinput22 \
   --enable-harfbuzz \
+  --enable-image-loader-webp \
   --disable-tslib \
   --disable-static \
   --build=$ARCH-slackware-linux
