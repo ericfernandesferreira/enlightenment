@@ -51,7 +51,6 @@ for dir in \
   python-efl \
   python-elm-extensions \
   ecrire \
-  ePad \
   emprint \
   ephoto \
   equate \
