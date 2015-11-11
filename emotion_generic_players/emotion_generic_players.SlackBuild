@@ -37,7 +37,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget http://download.enlightenment.org/rel/libs/emotion_generic_players/$PRGNAM-$VERSION-beta3.tar.gz
+wget http://download.enlightenment.org/rel/libs/emotion_generic_players/$PRGNAM-$VERSION.tar.gz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/esb}
@@ -63,10 +63,10 @@ set -e
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PRGNAM-$VERSION-beta3
-tar xvf $CWD/$PRGNAM-$VERSION-beta3.tar.gz
+rm -rf $PRGNAM-$VERSION
+tar xvf $CWD/$PRGNAM-$VERSION.tar.gz
 # git clone https://git.enlightenment.org/core/emotion_generic_players.git
-cd $PRGNAM-$VERSION-beta3
+cd $PRGNAM-$VERSION
 # git checkout
 
 chown -R root:root .
