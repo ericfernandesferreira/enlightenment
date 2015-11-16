@@ -25,7 +25,7 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=python-efl
-VERSION=${VERSION:-1.15.0}
+VERSION=${VERSION:-1.16.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_esb}
 
@@ -37,7 +37,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget http://download.enlightenment.org/rel/bindings/python/$PRGNAM-$VERSION.tar.gz
+wget http://download.enlightenment.org/rel/bindings/python/$PRGNAM-$VERSION.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/esb}
@@ -64,7 +64,7 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM-$VERSION
-tar xvf $CWD/$PRGNAM-$VERSION.tar.gz
+tar xvf $CWD/$PRGNAM-$VERSION.tar.xz
 # git clone https://git.enlightenment.org/bindings/python/python-efl.git
 cd $PRGNAM-$VERSION
 # git checkout
