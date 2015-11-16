@@ -24,7 +24,7 @@
 # Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Enlightenment Project
 
 PRGNAM=enlightenment
-VERSION=${VERSION:-0.19.13}
+VERSION=${VERSION:-0.20.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_esb}
 
@@ -36,7 +36,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget http://download.enlightenment.org/rel/apps/enlightenment/$PRGNAM-$VERSION.tar.xz
+wget http://download.enlightenment.org/rel/apps/enlightenment/enlightenment-0.20.0-rc.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/esb}
@@ -62,10 +62,10 @@ set -e
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PRGNAM-$VERSION
-tar -xvf $CWD/$PRGNAM-$VERSION.tar.xz
+rm -rf $PRGNAM-$VERSION-rc
+tar -xvf $CWD/$PRGNAM-$VERSION-rc.tar.xz
 # git clone https://git.enlightenment.org/core/enlightenment.git
-cd $PRGNAM-$VERSION
+cd $PRGNAM-$VERSION-rc
 # git checkout
 
 chown -R root:root .
