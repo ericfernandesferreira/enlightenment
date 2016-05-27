@@ -24,27 +24,27 @@
 # Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Enlightenment Project
 
 PRGNAM=enlightenment
-VERSION=${VERSION:-0.20.0}
+VERSION=${VERSION:-0.20.8}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_esb}
 
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
-    i?86) ARCH=i486 ;;
+    i?86) ARCH=i586 ;;
     arm*) ARCH=arm ;;
        *) ARCH=$( uname -m ) ;;
   esac
 fi
 
-wget http://download.enlightenment.org/rel/apps/enlightenment/enlightenment-0.20.0-rc.tar.xz
+wget http://download.enlightenment.org/rel/apps/enlightenment/$PRGNAM-$VERSION.tar.gz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/esb}
 PKG=$TMP/package-$PRGNAM
 OUTPUT=${OUTPUT:-/tmp}
 
-if [ "$ARCH" = "i486" ]; then
-  SLKCFLAGS="-O2 -march=i486 -mtune=i686"
+if [ "$ARCH" = "i586" ]; then
+  SLKCFLAGS="-O2 -march=i586 -mtune=i686"
   LIBDIRSUFFIX=""
 elif [ "$ARCH" = "i686" ]; then
   SLKCFLAGS="-O2 -march=i686 -mtune=i686"
@@ -62,10 +62,10 @@ set -e
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PRGNAM-$VERSION-rc
-tar -xvf $CWD/$PRGNAM-$VERSION-rc.tar.xz
+rm -rf $PRGNAM-$VERSION
+tar -xvf $CWD/$PRGNAM-$VERSION.tar.gz
 # git clone https://git.enlightenment.org/core/enlightenment.git
-cd $PRGNAM-$VERSION-rc
+cd $PRGNAM-$VERSION
 # git checkout
 
 chown -R root:root .
