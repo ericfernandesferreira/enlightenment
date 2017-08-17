@@ -26,7 +26,7 @@
 # Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Enlightenment Project
 
 PRGNAM=bullet
-VERSION=${VERSION:-2.83.7}
+VERSION=${VERSION:-2.86.1}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_esb}
 
@@ -67,7 +67,6 @@ cd $TMP
 rm -rf ${PRGNAM}3-$VERSION
 tar xvf $CWD/${PRGNAM}3-$VERSION.tar.gz || tar xvf $CWD/$VERSION.tar.gz
 cd ${PRGNAM}3-$VERSION
-
 chown -R root:root .
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
@@ -80,7 +79,7 @@ cd build
   cmake -DCMAKE_C_FLAGS="$SLKCFLAGS" \
         -DCMAKE_CXX_FLAGS="$SLKCFLAGS" \
         -DCMAKE_INSTALL_PREFIX=/usr \
-	-DLIB_SUFFIX="${LIBDIRSUFFIX}" \
+        -DLIB_SUFFIX="${LIBDIRSUFFIX}" \
         -DBUILD_SHARED_LIBS=ON \
         -DINSTALL_LIBS=ON \
         -DINSTALL_EXTRA_LIBS=ON \
