@@ -25,7 +25,7 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=ephoto
-VERSION=${VERSION:-0.9.99}
+VERSION=${VERSION:-1.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_esb}
 
@@ -36,6 +36,8 @@ if [ -z "$ARCH" ]; then
        *) ARCH=$( uname -m ) ;;
   esac
 fi
+
+# wget -c http://download.enlightenment.org/rel/apps/ephoto/$PRGNAM-$VERSION.tar.gz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/esb}
@@ -62,10 +64,10 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
+# tar xvf $CWD/$PRGNAM-$VERSION.tar.gz
 git clone https://git.enlightenment.org/apps/ephoto.git
 cd $PRGNAM
 git checkout
-
 chown -R root:root .
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
