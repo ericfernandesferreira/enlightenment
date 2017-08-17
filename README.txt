@@ -12,13 +12,11 @@ Esse source foi construído principalmente para quem quiser usar a última vers�
 do Enlightenment junto com o pulseaudio.
 
 Requerimentos:
-- slackware64 current
-- pulseaudio
+- slackware64 14.2
 
 Conteúdo:
 - ecrire
 - emprint
-- epad
 - ephoto
 - equate
 - rage
@@ -44,13 +42,11 @@ This source was built primarily for those who want to use the latest version
 Enlightenment along with pulseaudio.
 
 Requirements:
-- slackware64 current
-- pulseaudio
+- slackware64 14.2
 
 Contents:
 - ecrire
 - emprint
-- epad
 - ephoto
 - equate
 - rage
