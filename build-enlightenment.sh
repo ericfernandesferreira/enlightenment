@@ -38,21 +38,18 @@ TMP=${TMP:-/tmp}
 # This is the original directory where you started this script
 ESBROOT=$(pwd)
 
+#  lua \
+#  luajit \
+#  bullet \
+#  efl \
+#  python-efl \
+#  python-elm-extensions \
+#  ecrire \
+#  emprint \
+#  ephoto \
+
 # Loop for all base packages
 for dir in \
-  lua \
-  luajit \
-  bullet \
-  libwebp \
-  efl \
-  elementary \
-  evas_generic_loaders \
-  emotion_generic_players \
-  python-efl \
-  python-elm-extensions \
-  ecrire \
-  emprint \
-  ephoto \
   equate \
   rage \
   terminology \
