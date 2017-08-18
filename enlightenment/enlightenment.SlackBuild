@@ -84,7 +84,6 @@ CXXFLAGS="$SLKCFLAGS" \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --enable-mount-eeze \
-  --disable-bluez4 \
   --disable-static \
   --build=$ARCH-slackware-linux
 
