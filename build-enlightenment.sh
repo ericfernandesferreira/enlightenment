@@ -46,13 +46,13 @@ for dir in \
   efl \
   python-efl \
   python-elm-extensions \
+  enlightenment \
+  terminology \
+  rage \
   ecrire \
   emprint \
   ephoto \
   equate \
-  rage \
-  terminology \
-  enlightenment \
   ; do
   # Get the package name
   package=$(echo $dir | cut -f2- -d /)
