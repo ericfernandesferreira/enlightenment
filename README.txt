@@ -1,4 +1,4 @@
-Versão do Enlightenment : 0.20.8
+Versão do Enlightenment : 0.21.9
 Source do Enlightenment : github
 
 Essa minha versão do Enlightenment é baseada na versão do GArik
@@ -28,7 +28,7 @@ sh build-enlightenment.sh
 
 ------------------------------------------------------------------------------
 
-Enlightenment version: 0.20.8
+Enlightenment version: 0.21.9
 Enlightenment source : github
 
 This my version of Enlightenment is based on the version of Garik
