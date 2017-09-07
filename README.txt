@@ -13,6 +13,8 @@ do Enlightenment junto com o pulseaudio.
 
 Requerimentos:
 - slackware64 14.2
+- pacote de áudio (sdl2 e libwebp)
+https://github.com/ericfernandesferreira/audio
 
 Conteúdo:
 - ecrire
@@ -43,6 +45,8 @@ Enlightenment along with pulseaudio.
 
 Requirements:
 - slackware64 14.2
+- audio package (sdl2 and libwebp)
+https://github.com/ericfernandesferreira/audio
 
 Contents:
 - ecrire
