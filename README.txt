@@ -17,6 +17,7 @@ Requerimentos:
 https://github.com/ericfernandesferreira/audio
 
 Conteúdo:
+- extra
 - ecrire
 - emprint
 - ephoto
@@ -49,6 +50,7 @@ Requirements:
 https://github.com/ericfernandesferreira/audio
 
 Contents:
+- extra
 - ecrire
 - emprint
 - ephoto
