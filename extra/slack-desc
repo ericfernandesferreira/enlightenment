@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+     |-----handy-ruler------------------------------------------------------|
+extra: Extra is a app which allows you to install elementary themes
+extra: on your computer.
+extra:
+extra: The app is based on elementary and uses efl libraries to download
+extra: the theme.
+extra:
+extra: It does so by fetching themes from extra.enlightenment.org
+extra:
+extra:
+extra:
+extra:
