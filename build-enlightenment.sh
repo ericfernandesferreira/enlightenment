@@ -48,6 +48,7 @@ for dir in \
   python-elm-extensions \
   enlightenment \
   terminology \
+  extra \
   rage \
   ecrire \
   emprint \
