@@ -49,7 +49,6 @@ for dir in \
   enlightenment \
   terminology \
   extra \
-  rage \
   ecrire \
   emprint \
   ephoto \
