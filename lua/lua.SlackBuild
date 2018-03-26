@@ -53,7 +53,7 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM-$VERSION
-tar xvf $CWD/$PRGNAM-${VERSION}.tar.gz
+tar xvf $CWD/$PRGNAM-$VERSION.tar.gz
 cd $PRGNAM-$VERSION
 chown -R root:root .
 
@@ -93,6 +93,9 @@ cd ..
 # and install the pkgconfig file
 mkdir -p $PKG/usr/lib${LIBDIRSUFFIX}/pkgconfig
 cat etc/lua.pc > $PKG/usr/lib${LIBDIRSUFFIX}/pkgconfig/lua.pc
+
+# Don't package the static libraries:
+rm -f $PKG/usr/lib${LIBDIRSUFFIX}/*.a
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
